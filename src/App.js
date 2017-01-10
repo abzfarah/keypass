@@ -13,7 +13,6 @@ class AppContainer extends React.Component {
   }
 
   _onInputChange (event) {
-
     if (this.state.term === '' && event.target.value !== '') {
         this.props.router.push('/list')
     }
@@ -21,9 +20,6 @@ class AppContainer extends React.Component {
     this.setState({ 
         term: event.target.value 
     })
-
-
-
 
   }
 

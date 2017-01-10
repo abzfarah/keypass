@@ -3,7 +3,7 @@ import _ from 'lodash'
 class Session {
 
     constructor () {
-        this.movies = JSON.parse(window.localStorage['movies']) || new Array()
+        this.movies = window.localStorage.getItem('movies') ? JSON.parse(window.localStorage['movies']) : new Array()
 
     }
 

@@ -14,19 +14,9 @@ const Loader = () => {
 }
 
 class List extends Component {
-
     constructor (props) {
-        super(props)
-        this.state = {
-            selected: props.value || {
-                label: props.placeholder || 'Select...',
-                value: ''
-            },
-            isOpen: false
-        }
-
-        this.handler = this.handler.bind(this)
-
+      super(props)
+      this.handler = this.handler.bind(this)
     }
 
     handler(option, movie) {
@@ -48,7 +38,6 @@ class List extends Component {
 
         let title = option.Title
         let id = option.imdbID
-
         return (
             <div className="row" key={id}>
                 <div>
@@ -82,7 +71,6 @@ class List extends Component {
         let list = null
 
         if (value !== null && value.Response !== 'False') list = this.buildMenu(value)
-
         return (
             <div className="hey">
                 { pending &&  <Loader /> }
